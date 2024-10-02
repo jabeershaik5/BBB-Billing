@@ -1,0 +1,57 @@
+/* category card */
+
+.category-card{
+    height:8rem;
+    width:15rem;
+    background-color: yellow;
+    margin:1rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: color 0.3s ease-out, background-color 0.3s ease-out;
+    border-radius: 5px;
+    border:1px solid transparent;
+}
+.category-card:hover{
+    background-color: black;
+    color: yellow;
+    border:1px solid yellow;
+}
+
+/* menucard */
+
+.menu-card{
+    height: 10rem;
+    width:12rem;
+    background-color: yellow;
+    color:black;
+}
+.menu-card .title-container{
+    height:70%;
+    width:100%;
+    background-color: red;
+    font-size: 2rem;
+    text-align: center;
+}
+.menu-card .counter{
+    display: flex;
+    justify-content: space-between;
+    align-items: bottom;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.menu-card .counter button{
+    width:3rem;
+    background-color: transparent;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    font-size: 2.5rem;
+}
+.menu-card .counter button:hover{
+    background-color: black;
+    color:yellow;
+}

@@ -1,0 +1,31 @@
+main{
+    height:calc(100vh - 5rem);
+    display: flex;
+}
+.categories{
+    height:100%;
+    width:20%;
+    background-color: #1E1E1E;
+    padding:2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.menu{
+    width:60%;
+    padding:1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: max-content;
+    row-gap:2rem;
+    justify-items: center;
+    align-items: top;
+}
+.cart{
+    height:100%;
+    background-color: #1E1E1E;
+    width:20%;
+    color:white;
+    font-size: 2rem;
+}

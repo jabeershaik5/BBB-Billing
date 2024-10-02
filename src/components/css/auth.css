@@ -1,0 +1,50 @@
+.login, .signup{
+    height: calc(100vh - 5rem);
+    background-color: #1E1E1E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    width:40rem;
+    height:30rem;
+    background-color: yellow;
+    border-radius: 5px;
+    text-align: center;
+    padding:1rem 2rem;
+}
+.form .form-type{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.form .form-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+}
+.form .form-input .input{
+    width:80%;
+    padding:1rem 1rem;
+    margin:1rem 0;
+}
+.form .submit-btn{
+    padding:1rem 2rem;
+    background-color: #1E1E1E;
+    color:white;
+    outline: none;
+    border: none;
+    margin-top: 2.5rem;
+    border:2px solid transparent;
+}
+.form .submit-btn:hover{
+    background-color: yellow;
+    border:2px solid black;
+    color:black;
+    cursor: pointer;
+}
+.form .form-input .input:focus{
+    outline: none;
+}

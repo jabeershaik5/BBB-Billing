@@ -1,0 +1,42 @@
+
+header{
+  height: 5rem;
+  width:100%;
+  background-color: yellow;
+  padding:0 4rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+  font-size: 1.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.burgerMenu{
+  display: flex;
+}
+.burgerMenu li{
+  margin: 0 1.5rem;
+  cursor: pointer;
+}
+
+@media screen and (width < 480px){
+  header{
+    position: fixed;
+  }
+  .burgerMenu{
+    flex-direction: column;
+    position: fixed;
+    top:5rem;
+    right:0;
+    background-color: yellow;
+    width:100%;
+    height:auto;
+    text-align: right;
+  }
+  .burgerMenu li{
+    margin: 1rem 4rem;
+  }
+}
