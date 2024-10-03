@@ -3,7 +3,8 @@
 .category-card{
     height:8rem;
     width:15rem;
-    background-color: yellow;
+    background-color: #1E1E1E;
+    color:yellow;
     margin:1rem 0;
     font-size: 2rem;
     font-weight: 600;
@@ -13,28 +14,40 @@
     cursor: pointer;
     transition: color 0.3s ease-out, background-color 0.3s ease-out;
     border-radius: 5px;
-    border:1px solid transparent;
+    border:2px solid transparent;
 }
 .category-card:hover{
-    background-color: black;
-    color: yellow;
-    border:1px solid yellow;
+    background-color: yellow;
+    color: #1E1E1E;
+    border:2px solid #1E1E1E;
 }
 
 /* menucard */
 
 .menu-card{
-    height: 10rem;
-    width:12rem;
+    height: 12rem;
+    width:15rem;
     background-color: yellow;
     color:black;
+    margin:0 1rem;
+    border-radius: 4px;
+    overflow: hidden;
 }
 .menu-card .title-container{
     height:70%;
     width:100%;
-    background-color: red;
+    background-color: yellow;
+    color: #1E1E1E;
+    font-size: 1.6rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left:0.5rem;
+}
+.menu-card .title-container .price{
     font-size: 2rem;
-    text-align: center;
+    margin-top:0.8rem;
 }
 .menu-card .counter{
     display: flex;
@@ -42,16 +55,22 @@
     align-items: bottom;
     font-size: 2rem;
     font-weight: 700;
+    height:30%;
+    background-color:white;
+    color:#1E1E1E;
+    user-select: none;
 }
 .menu-card .counter button{
-    width:3rem;
+    width:5rem;
+    height:100%;
     background-color: transparent;
     outline: none;
     border:none;
     cursor: pointer;
     font-size: 2.5rem;
+    
 }
 .menu-card .counter button:hover{
-    background-color: black;
-    color:yellow;
+    background-color: yellow;
+    color:#1E1E1E;
 }

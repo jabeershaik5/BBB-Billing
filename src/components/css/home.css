@@ -4,8 +4,8 @@ main{
 }
 .categories{
     height:100%;
-    width:20%;
-    background-color: #1E1E1E;
+    width:15%;
+    background-color: yellow;
     padding:2rem;
     display: flex;
     justify-content: center;
@@ -13,19 +13,77 @@ main{
     align-items: center;
 }
 .menu{
-    width:60%;
-    padding:1rem;
+    width:70%;
+    padding:2rem 1rem;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: max-content;
     row-gap:2rem;
     justify-items: center;
     align-items: top;
+    background-color: #1E1E1E;
 }
 .cart{
     height:100%;
     background-color: #1E1E1E;
-    width:20%;
+    width:30%;
     color:white;
     font-size: 2rem;
+    padding: 0 1rem;
+    padding-top: 2rem;
+}
+.cart-title{
+    padding:0.5rem 0;
+    border-bottom:1px solid white;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.cart-total{
+    font-size: 1.8rem;
+    margin-right: 0.5rem;
+}
+.cart-total-price{
+    color:#1E1E1E;
+    background-color: yellow;
+    padding:0.3rem 0.5rem;
+}
+.cart .cart-list{
+    height:70%;
+    width:100%;
+}
+.cart .checkout-btn-container{
+    width:100%;
+    display: flex;
+    justify-content: end;
+}
+.cart .checkout-btn-container .checkout-btn{
+    width:90%;
+    padding:1rem 2rem;
+    margin-top:3rem;
+    margin-right:0.5rem;
+    background-color: yellow;
+    border: 1px solid transparent;
+    outline:none;
+    transition: transform 0.3s ease-out;
+    cursor: pointer;
+}
+.cart .checkout-btn-container .checkout-btn:hover{
+    transform: translateY(-4px);
+    color: yellow;
+    background-color:transparent;
+    border:1px solid yellow;
+}
+.cart .cart-item{
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    padding:0.5rem 0;
+    color:#1E1E1E;
+    background-color: yellow;
+    padding:1rem;
+    margin:1rem 0;
+}
+.cart .cart-item p{
+    margin: 0 0.5rem;
 }
