@@ -1,0 +1,71 @@
+.reciept{
+    height:auto;
+    min-height: 25rem;
+    max-width:190px;
+    background-color: white;
+    color:black;
+    margin: auto auto;
+    padding:5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.reciept .reciept-logo{
+    height:50px;
+    width:70px;
+    background-color: blue;
+}
+.receipt-address{
+    text-align: center;
+    width:100%;
+    font-size: 8px;
+    line-height: 8px;
+    margin-top: 5px;
+}
+.rg-no{
+    font-size: 7px;
+}
+.reciept-body{
+    width:90%;
+    padding:2px 0;
+}
+.invoice-data{
+    font-size: 8px;
+}
+
+.reciept-body .tax-invoice{
+    width:100%;
+    font-size: 10px;
+    font-weight: 600;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+.order-data{
+    margin-top:2px;
+}
+.order-header{
+    display: flex;
+    justify-content: space-between;
+    border-top:1px solid black;
+    border-bottom: 1px solid black;
+    padding:2px 0;
+    font-weight: 600;
+    font-size: 8px;
+}
+.order-body{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding:10px 0;
+}
+.total{
+    width:100%;
+    text-align: right;
+    padding:10px;
+    border-bottom: 1px solid black;
+}
+.reciept-footer{
+    font-size: 7px;
+}

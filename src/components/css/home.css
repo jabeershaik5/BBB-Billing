@@ -13,10 +13,10 @@ main{
     align-items: center;
 }
 .menu{
-    width:70%;
+    max-width:65%;
     padding:2rem 1rem;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: max-content;
     row-gap:2rem;
     justify-items: center;
@@ -26,11 +26,13 @@ main{
 .cart{
     height:100%;
     background-color: #1E1E1E;
-    width:30%;
+    width:35%;
     color:white;
     font-size: 2rem;
     padding: 0 1rem;
     padding-top: 2rem;
+    border-left:2px solid yellow;
+    overflow: hidden;
 }
 .cart-title{
     padding:0.5rem 0;
@@ -67,6 +69,7 @@ main{
     outline:none;
     transition: transform 0.3s ease-out;
     cursor: pointer;
+    margin-bottom: 100px;
 }
 .cart .checkout-btn-container .checkout-btn:hover{
     transform: translateY(-4px);
