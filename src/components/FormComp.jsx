@@ -9,7 +9,7 @@ const FormComp = ({type, hook}) => {
     const email = useRef(null);
     const pwd = useRef(null);
 
-    const {func, error, isPending} = hook;
+    // const {func, error, isPending} = hook;
 
     //logging the current input value and emptying after.
     const handleSubmit = (e)=>{

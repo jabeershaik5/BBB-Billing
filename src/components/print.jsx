@@ -58,8 +58,7 @@ const Print = () => {
         <div className="reciept-footer">
             <p>Developer by Jabeer Shaik</p>
         </div>
-    </div>,
-    document.body
+    </div>
     
   )
 }

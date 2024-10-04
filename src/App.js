@@ -6,7 +6,6 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import History from './components/History';
 import Home from './components/Home';
-import Print  from './components/print';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';

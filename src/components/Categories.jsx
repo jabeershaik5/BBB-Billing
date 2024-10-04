@@ -1,7 +1,7 @@
 import React from 'react';
 import CategoryCard from './CategoryCard';
 
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 function Categories() {
   

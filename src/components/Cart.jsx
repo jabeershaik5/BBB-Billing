@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './css/home.css';
+import './css/print.css';
 
-
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import printJS from 'print-js';
-import jsPDF from 'jspdf';
 import  html2pdf  from 'html2pdf.js';
 
 
@@ -18,7 +17,7 @@ const Cart = () => {
     const cartTotal = (cartItems)=>{
       let newTotal = 0;
       cartItems.map(item=>{
-        newTotal+=(item.price*item.quantity)
+        return newTotal+=(item.price*item.quantity)
       });
       setTotal(newTotal);
 
