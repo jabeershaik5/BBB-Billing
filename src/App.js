@@ -7,7 +7,7 @@ import Signup from './components/Signup';
 import History from './components/History';
 import Home from './components/Home';
 
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useState } from 'react';
 function App() {
 
