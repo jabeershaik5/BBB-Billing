@@ -1,6 +1,9 @@
 main{
     height:calc(100vh - 5rem);
     display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 .categories{
     height:100%;
@@ -13,7 +16,8 @@ main{
     align-items: center;
 }
 .menu{
-    max-width:65%;
+    max-width:60%;
+    width:60%;
     padding:2rem 1rem;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -26,13 +30,14 @@ main{
 .cart{
     height:100%;
     background-color: #1E1E1E;
-    width:35%;
+    width:25%;
     color:white;
     font-size: 2rem;
     padding: 0 1rem;
     padding-top: 2rem;
     border-left:2px solid yellow;
     overflow: hidden;
+    position: relative;
 }
 .cart-title{
     padding:0.5rem 0;

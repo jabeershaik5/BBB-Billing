@@ -36,7 +36,7 @@ const Cart = () => {
       html2canvas: { scale: 2 },
       jsPDF: {
         unit: 'in',
-        format: [2, 3], // Custom size: width = 3 inches, height = 10 inches
+        format: [4, 7], // Custom size: width = 3 inches, height = 10 inches
         orientation: 'portrait'
       }
     };
@@ -74,6 +74,7 @@ const Cart = () => {
       <div className="checkout-btn-container">
         <button className='checkout-btn' onClick={handlePrint}>{cartItems.length>0 ?'Check Out': 'Add Items'}</button>
       </div>
+      <div className="reciept-wrapper">
       <div className='reciept' ref={printThis}>
         <div className="reciept-logo" style={{display:'none'}}>
           <img src="" alt="" />
@@ -101,21 +102,26 @@ const Cart = () => {
                 <p>QUANTITY</p>
                 <p>AMOUNT</p>
               </div>
-              <div className="order-body">
-                <p>Dum Biryani</p>
-                <p>180</p>
-                <p>1</p>
-                <p>180.00</p>
-              </div>
+              {
+                cartItems.map(item => {
+                  return <div className="order-body">
+                          <p>{item.title}</p>
+                          <p>{item.price}</p>
+                          <p>{item.quantity}</p>
+                          <p>{item.quantity * item.price}</p>
+                        </div>
+                })
+              }
             </div>
             <div className="total">
-              <p>Total: R.s 180.00</p>
+              <p>Total: R.s {total}</p>
             </div>
         </div>
         <div className="reciept-footer">
-            <p>Developer by Jabeer Shaik</p>
+            <p>Developed by Jabeer Shaik</p>
         </div>
-    </div>
+      </div>
+      </div>
     </div>
   )
 }
