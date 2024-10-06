@@ -1,20 +1,29 @@
-import React from "react";
+import { auth } from '../db/db';
+
 
 import { useState } from "react";
+import { signOut } from "firebase/auth";
 
-export const useLogout = () =>{
+const useLogout = () =>{
     const [error, setError] = useState(null);
-    const [isPending, setIsPending] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [user, setUser] = useState();
 
     const logout = async()=>{
-        setIsPending(true);
+        
+        setLoading(true);
 
         try{
 
+            await signOut(auth);
+            setUser(null);
+
         }catch(err){
             setError(err.message);
-            setIsPending(false);
+            setLoading(false);
         }
 
     }
+    return { logout,  user, error, loading}
 }
+export default useLogout
