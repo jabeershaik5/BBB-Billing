@@ -1,0 +1,229 @@
+{
+    "User UID":"",
+    "menu":[
+        {
+            "title":"Dum Biryani",
+            "price":180,
+            "category":1,
+            "uid":"BBB",
+            "itemId":"01-01"
+        },
+        {
+            "title":"Dum Biryani",
+            "price":340,
+            "category":2,
+            "uid":"BBB",
+            "itemId":"01-02"
+        },
+        {
+            "title":"Dum Biryani",
+            "price":500,
+            "category":3,
+            "uid":"BBB",
+            "itemId":"01-03"
+        },
+        {
+            "title":"Dum Biryani",
+            "price":680,
+            "category":4,
+            "uid":"BBB",
+            "itemId":"01-04"
+        },
+        {
+            "title":"Dum Biryani",
+            "price":850,
+            "category":5,
+            "uid":"BBB",
+            "itemId":"01-05"
+        },
+        {
+            "title":"Fry Biryani",
+            "price":180,
+            "category":1,
+            "uid":"BBB",
+            "itemId":"02-01"
+        },
+        {
+            "title":"Fry Biryani",
+            "price":340,
+            "category":2,
+            "uid":"BBB",
+            "itemId":"02-02"
+        },
+        {
+            "title":"Fry Biryani",
+            "price":500,
+            "category":3,
+            "uid":"BBB",
+            "itemId":"02-03"
+        },
+        {
+            "title":"Fry Biryani",
+            "price":680,
+            "category":4,
+            "uid":"BBB",
+            "itemId":"02-04"
+        },
+        {
+            "title":"Fry Biryani",
+            "price":850,
+            "category":5,
+            "uid":"BBB",
+            "itemId":"02-05"
+        },
+        {
+            "title":"Lollipop Biryani",
+            "price":200,
+            "category":1,
+            "uid":"BBB",
+            "itemId":"03-01"
+        },
+        {
+            "title":"Lollipop Biryani",
+            "price":380,
+            "category":2,
+            "uid":"BBB",
+            "itemId":"03-02"
+        },
+        {
+            "title":"Lollipop Biryani",
+            "price":570,
+            "category":3,
+            "uid":"BBB",
+            "itemId":"03-03"
+        },
+        {
+            "title":"Lollipop Biryani",
+            "price":750,
+            "category":4,
+            "uid":"BBB",
+            "itemId":"03-04"
+        },
+        {
+            "title":"Lollipop Biryani",
+            "price":950,
+            "category":5,
+            "uid":"BBB",
+            "itemId":"03-05"
+        },
+        {
+            "title":"65 Biryani",
+            "price":220,
+            "category":1,
+            "uid":"BBB",
+            "itemId":"04-01"
+        },
+        {
+            "title":"65 Biryani",
+            "price":420,
+            "category":2,
+            "uid":"BBB",
+            "itemId":"04-02"
+        },
+        {
+            "title":"65 Biryani",
+            "price":600,
+            "category":3,
+            "uid":"BBB",
+            "itemId":"04-03"
+        },
+        {
+            "title":"65 Biryani",
+            "price":800,
+            "category":4,
+            "uid":"BBB",
+            "itemId":"04-04"
+        },
+        {
+            "title":"65 Biryani",
+            "price":1000,
+            "category":5,
+            "uid":"BBB",
+            "itemId":"04-05"
+        },
+        {
+            "title":"BB Special",
+            "price":230,
+            "category":1,
+            "uid":"BBB",
+            "itemId":"05-01"
+        },
+        {
+            "title":"BB Special",
+            "price":440,
+            "category":2,
+            "uid":"BBB",
+            "itemId":"05-02"
+        },
+        {
+            "title":"BB Special",
+            "price":630,
+            "category":3,
+            "uid":"BBB",
+            "itemId":"05-03"
+        },
+        {
+            "title":"BB Special",
+            "price":840,
+            "category":4,
+            "uid":"BBB",
+            "itemId":"05-04"
+        },
+        {
+            "title":"BB Special",
+            "price":1050,
+            "category":5,
+            "uid":"BBB",
+            "itemId":"05-05"
+        },
+        {
+            "title":"Fish Biryani",
+            "price":200,
+            "category":1,
+            "uid":"BBB",
+            "itemId":"06-01"
+        },
+        {
+            "title":"Fish Biryani",
+            "price":380,
+            "category":2,
+            "uid":"BBB",
+            "itemId":"06-02"
+        },
+        {
+            "title":"Fish Biryani",
+            "price":570,
+            "category":3,
+            "uid":"BBB",
+            "itemId":"06-03"
+        },
+        {
+            "title":"Fish Biryani",
+            "price":750,
+            "category":4,
+            "uid":"BBB",
+            "itemId":"06-04"
+        },
+        {
+            "title":"Fish Biryani",
+            "price":950,
+            "category":5,
+            "uid":"BBB",
+            "itemId":"06-05"
+        },
+        {
+            "title":"special",
+            "price":100,
+            "category": 7,
+            "uid":"BBB",
+            "itemId":"08-01"
+        },
+        {
+            "title":"Normal",
+            "price":80,
+            "category": 7,
+            "uid":"BBB",
+            "itemId":"08-02"
+        }
+    ]
+}

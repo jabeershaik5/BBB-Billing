@@ -6,8 +6,8 @@ import useLogin from '../hooks/useLogin';
 
 const Login = ()=> {
 
-  const {logIn:func, error, loading, user} = useLogin();
-  const hook = {func, error, loading, user};
+  const {logIn:func, error, loading, user, setError} = useLogin();
+  const hook = {func, error, loading, user, setError};
 
   return (
     <div className='login'>

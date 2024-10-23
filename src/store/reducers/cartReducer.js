@@ -1,5 +1,6 @@
 const initialState = {
     cartItems:[],
+    clearCart:false,
     cartTotal: 0,
     printRef: null
 };
@@ -8,7 +9,7 @@ export  const cartReducer = (state= initialState, action) =>{
     switch(action.type){
         case "ADD_TO_CART":
             //adds item from the cart.
-            return {...state, cartItems: [...state.cartItems, action.payload ]}
+            return {...state, cartItems: [...state.cartItems, action.payload ], clearCart:false}
         case "REMOVE_FROM_CART":
             //removes the item from the cart.
             return {...state, cartItems: state.cartItems.filter(item=> item.itemId !== action.payload.itemId)}
@@ -28,6 +29,8 @@ export  const cartReducer = (state= initialState, action) =>{
                 }
                 return item;
             })}
+        case "CLEAR_CART":
+            return {...state, cartItems:[], clearCart:true};
         default:
             return state
     }

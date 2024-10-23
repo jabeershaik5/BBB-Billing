@@ -2,15 +2,18 @@ import React, { useEffect, useRef, useState } from 'react';
 import './css/home.css';
 import './css/print.css';
 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import printJS from 'print-js';
 import  html2pdf  from 'html2pdf.js';
+
+import TableComp from './TableComp';
 
 
 const Cart = () => {
 
   const [total, setTotal] = useState(0);
   const cartItems = useSelector(state=> state.cartReducer.cartItems);
+  const dispatch = useDispatch();
   const printThis = useRef();
 
   useEffect(()=>{
@@ -50,7 +53,7 @@ const Cart = () => {
         URL.revokeObjectURL(url);
       }, 1000);
     });
-    console.log('done');
+    dispatch({type:'CLEAR_CART'});
   }
 
   return (
@@ -60,20 +63,12 @@ const Cart = () => {
       <p className='cart-total'>Total: <span className="cart-total-price">{total} R.s</span></p>
       </div>
       <div className="cart-list">
-      {
-          cartItems.map((item,index)=> {
-            return <div key={item.itemId} className='cart-item'>
-              <p className='cart-item-name'>{index+1}.{item.title}</p>
-              <p> &#10005; {item.quantity} </p>
-              <p>Rs. {item.price* item.quantity}</p>
-            </div>
-          }
-        )
-      }
+        <TableComp row='cart-row' header='cart-header' settings='settings' />
       </div>
       <div className="checkout-btn-container">
-        <button className='checkout-btn' onClick={handlePrint}>{cartItems.length>0 ?'Check Out': 'Add Items'}</button>
+        <button className='checkout-btn' onClick={()=> cartItems.length>0 &&handlePrint()}>{cartItems.length>0 ?'Check Out': 'Add Items'}</button>
       </div>
+      {/* hidden reciet to print */}
       <div className="reciept-wrapper">
       <div className='reciept' ref={printThis}>
         <div className="reciept-logo" style={{display:'none'}}>
@@ -96,22 +91,7 @@ const Cart = () => {
               <p>Date: {Date.now()}</p>
             </div>
             <div className="order-data">
-              <div className="order-header">
-                <p>ITEM</p>
-                <p>PRICE</p>
-                <p>QUANTITY</p>
-                <p>AMOUNT</p>
-              </div>
-              {
-                cartItems.map(item => {
-                  return <div className="order-body">
-                          <p>{item.title}</p>
-                          <p>{item.price}</p>
-                          <p>{item.quantity}</p>
-                          <p>{item.quantity * item.price}</p>
-                        </div>
-                })
-              }
+              <TableComp row='cart-row-print' header='cart-header' settings='settings-print' />
             </div>
             <div className="total">
               <p>Total: R.s {total}</p>

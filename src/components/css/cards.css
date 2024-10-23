@@ -1,8 +1,9 @@
 /* category card */
 
 .category-card{
-    height:8rem;
-    width:15rem;
+    min-height:5rem;
+    max-height:5rem;
+    width:12rem;
     background-color: #1E1E1E;
     color:yellow;
     margin:1rem 0;
@@ -26,7 +27,7 @@
 
 .menu-card{
     height: 12rem;
-    width:12rem;
+    width:15rem;
     background-color: yellow;
     color:black;
     margin:0 1rem;
@@ -38,7 +39,7 @@
     width:100%;
     background-color: yellow;
     color: #1E1E1E;
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -48,6 +49,9 @@
 .menu-card .title-container .price{
     font-size: 2rem;
     margin-top:0.8rem;
+}
+.menu-card_item-name, .menu-card_price{
+    font-weight: 600;
 }
 .menu-card .counter{
     display: flex;
@@ -73,4 +77,69 @@
 .menu-card .counter button:hover{
     background-color: yellow;
     color:#1E1E1E;
+}
+
+/* menu form */
+.update-menu-page{
+    height:calc(100vh - 5rem);
+    background-color: #1E1E1E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-form{
+    height:auto;
+    width:50rem;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:2rem 1rem;
+    border-radius: 10px;
+}
+.menu-form-title{
+    font-size: 3rem;
+    font-weight: 600;
+    color:#1E1E1E;
+    border-bottom:3px solid #1E1E1E;
+    margin-bottom: 2rem;
+}
+.menu-form .form-input{
+    display: flex;
+    flex-direction: column;
+    margin:0.8rem 0;
+    width:70%;
+    align-items: center;
+}
+.menu-form .form-input label{
+    font-size: 1.8rem;
+    margin:1rem 0;
+    font-weight: 500;
+    color:#1E1E1E;
+    align-self: flex-start;
+}
+.menu-form .input{
+    border:none;
+    outline:none;
+    padding:1rem;
+    width:100%;
+}
+.update-menu-btn{
+    padding:1rem 2rem;
+    background-color: #1E1E1E;
+    color:yellow;
+    border:none;
+    outline: none;
+    margin:1rem 0;
+    margin-top: 3rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition:transform 0.2s ease-out;
+}
+.update-menu-btn:active{
+    transform: translateY(2px);
+    color:#1E1E1E;
+    border:1px solid #1E1E1E;
+    background-color: yellow;
 }

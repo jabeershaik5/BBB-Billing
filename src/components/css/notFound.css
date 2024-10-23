@@ -1,0 +1,32 @@
+.not-found-page{
+    height:calc(100vh - 5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:0 5rem;
+}
+.not-found-page .not-found-message{
+    font-size: 5rem;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 1rem;
+}
+.go-back-btn{
+    background-color: #1E1E1E;
+    width:auto;
+    align-self: center;
+    color:yellow;
+    font-size: 2rem;
+    padding:1rem 2rem;
+    margin-top: 4rem;
+    border:2px solid transparent;
+    transition: transform 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out;
+}
+.go-back-btn:hover{
+    color:#1E1E1E;
+    border: 2px solid #1E1E1E;
+    background-color: yellow;
+}
+.go-back-btn:active{
+    transform: translateY(2px);
+}

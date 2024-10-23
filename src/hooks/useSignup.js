@@ -1,25 +1,32 @@
-// import React from 'react';
-
 import { useState } from 'react';
-// import { useSelector, useDispatch } from 'react-redux';
+import { auth } from '../db/db';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+
+import { useDispatch } from 'react-redux';
 
 export const useSignup = ()=>{
     const [error, setError] = useState(null);
-    const [isPending, setIsPending] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const dispatch = useDispatch();
 
-    const signup = async({email, password})=>{
+    const signup = async(email, password)=>{
 
-        setIsPending(false);
-
+        setLoading(true);
+        setError(null);
         try{
-            
+            const userCreds = await createUserWithEmailAndPassword(auth, email, password);
+            const user = userCreds.user;
+            dispatch({type:"LOG_USER", payload:user});
 
         }catch(err){
             setError(err.message)
-            setIsPending(false);
-
+            setLoading(false);
         }
+        finally{
+            setLoading(false);
+        }
+    
     };
     
-    return{signup, error, isPending}
+    return{ signup, error, loading, setError }
 };

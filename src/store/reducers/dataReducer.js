@@ -1,5 +1,6 @@
 let initialstate = {
     menu: null,
+    menuData:null,
     categories: [
         {
             id:1,
@@ -21,14 +22,23 @@ let initialstate = {
             id:5,
             title: '5 person'
         },
+        {
+            id:6,
+            title: 'Starters'
+        },
+        {
+            id:7,
+            title:'Shawarma'
+        }
     ]
 }
 
 export const dataReducer = (state = initialstate, action)=>{
-    switch (action.type) {
-        case 'LOAD_DATA':
-            return {...state, menu: action.payload}       
-    
+    switch (action.type) {   
+        case "SET_MENU":
+            return {...state, menu:action.payload}   
+        case "UPDATE_MENU":
+            return {...state, menuData:action.payload}
         default:
             return state;
     }
