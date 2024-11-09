@@ -54,6 +54,10 @@
     font-size: 1.8rem;
     animation: bounce 1 ease-out infinite;
 }
+.error-message{
+    color: red;
+    font-size: 1.4rem;
+}
 
 @keyframes bounce {
     0%{

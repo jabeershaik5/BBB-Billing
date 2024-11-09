@@ -10,7 +10,7 @@ import History from './components/History';
 import Home from './components/Home';
 import UpdateMenu from './components/UpdateMenu';
 import useFetch from './hooks/useFetch';
-import AdminC from './AdminC';
+import AdminC from './components/AdminC';
 import NotFound from './components/NotFound';
 
 import { auth } from './db/db';
@@ -43,9 +43,9 @@ function App() {
           <Route path='/signup' element={!user ? <Signup /> : <Home />} />
           <Route path='/history' element={!user ? <Signup /> : <History />} />
           <Route path='/update-menu' element={!user ? <Signup /> : <UpdateMenu />} />
+          <Route path='/upload' element={!user? <AdminC />: <Home />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
-        {user &&<AdminC />}
         </React.Fragment>)}
     </div>
   );
