@@ -29,19 +29,51 @@ main{
     max-width:60%;
     width:43%;
     padding:2rem 1rem;
+    background-color: #1E1E1E;
+}
+.menu-card-container{
+    height:100%;
+    width:100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: max-content;
-    row-gap:2rem;
+    grid-row-gap:2rem;
     justify-items: center;
     align-items: top;
-    background-color: #1E1E1E;
+    
 }
 .menu .category-prompt{
     color:white;
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     grid-column: span 3;
     font-weight: 600;
+}
+.retry-btn{
+    padding:1rem 2rem;
+    background-color: yellow;
+    color:black;
+    font-size: 1.8rem;
+    border:1px solid transparent;
+    margin-top: 2rem;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+.retry-btn:hover{
+    background-color: transparent;
+    color:yellow;
+    border:1px solid yellow;
+}
+.retry-btn:active{
+    transform: translateY(2px);
+}
+.category-title{
+    color:white;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    background-color: yellow;
+    color:black;
+    font-weight: 600;
+    padding:0 1rem;
 }
 .cart{
     height:100%;

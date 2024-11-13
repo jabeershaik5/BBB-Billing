@@ -32,8 +32,7 @@ const FormComp = ({type, hook}) => {
         setError(null);
         const emailId = email.current.value;
         const pswd = pwd.current.value;
-        email.current.value = '';
-        pwd.current.value = '';
+
         const creds = [emailId, pswd];
         if(validateCreds(creds)){
             func(emailId, pswd);
@@ -41,6 +40,8 @@ const FormComp = ({type, hook}) => {
             setValidation(true);
             return
         }
+        email.current.value = '';
+        pwd.current.value = '';
         setValidation(false);
         
    }
@@ -48,18 +49,19 @@ const FormComp = ({type, hook}) => {
     return (
 
         //form takes a type attribute to mention it as headline ex: LOGIN and SIGNUP
-       !loading ? <form action="" className='form' onSubmit={handleSubmit}>
+       <form action="" className='form' onSubmit={handleSubmit}>
             <div className="form-type">{type}</div>
             <div className="form-input">
                 <input type="text" placeholder='Enter Email' ref={email} className='input' />
                 <input type="password" placeholder='Enter Password' ref={pwd} className='input' />
             </div>
             {error && <p>{error}</p>}
+            <p>{loading&&'Loading'}</p>
             {
                 !validation&&<div className="error-message">Enter valid credentials</div>
             }
             <button className='submit-btn' type='submit'>{type}</button>
-        </form> : <div className='loading-sim'>Loading...</div>
+        </form>
     )
 }
 

@@ -9,7 +9,6 @@ import Signup from './components/Signup';
 import History from './components/History';
 import Home from './components/Home';
 import UpdateMenu from './components/UpdateMenu';
-import useFetch from './hooks/useFetch';
 import AdminC from './components/AdminC';
 import NotFound from './components/NotFound';
 
@@ -22,16 +21,14 @@ function App() {
   const user = useSelector(state => state.userReducer.user);
   const authReady = useSelector(state=> state.userReducer.authReady);
   const dispatch = useDispatch();
-  const { fetchData } = useFetch();
 
   useEffect(()=>{
-    fetchData();
     const unsub = auth.onAuthStateChanged(user =>{
       dispatch({type:'AUTH_IS_READY', payload:user});
       unsub();
     })
     
-  },[dispatch, fetchData]);
+  },[dispatch]);
 
   return (
     <div className="App">

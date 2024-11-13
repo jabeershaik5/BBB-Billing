@@ -11,13 +11,13 @@ function CategoryCard({item}) {
   const dispatch = useDispatch();
 
   const handleCategory = (id)=>{
-      console.log(menu);
+
       let curCategory = menu.filter(item=> item.category === id);   
-      dispatch({type:'UPDATE_MENU', payload:curCategory});
-      
+      dispatch({type:'UPDATE_MENU', payload:curCategory});      
   }
 
   return (
+    
     <div className='category-card' onClick={()=>{handleCategory(item.id)}}>
         {item.title}
     </div>

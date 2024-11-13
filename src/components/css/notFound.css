@@ -13,9 +13,9 @@
 }
 .go-back-btn{
     background-color: #1E1E1E;
+    color:yellow !important;
     width:auto;
     align-self: center;
-    color:yellow;
     font-size: 2rem;
     padding:1rem 2rem;
     margin-top: 4rem;
@@ -23,7 +23,7 @@
     transition: transform 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out;
 }
 .go-back-btn:hover{
-    color:#1E1E1E;
+    color:#1E1E1E !important;
     border: 2px solid #1E1E1E;
     background-color: yellow;
 }

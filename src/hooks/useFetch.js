@@ -7,11 +7,14 @@ import { useState } from "react";
 
 const useFetch = ()=>{
     const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(false);
     const dispatch = useDispatch();
 
     const user = useSelector(state=> state.userReducer.user);
 
    const fetchData = async()=>{
+        setLoading(true);
+        setError(null);
         try {
             if(user){
                 const restaurantId = user.uid;
@@ -20,9 +23,9 @@ const useFetch = ()=>{
                 const resMenu = restaurantMenu.data();
                 const menu = resMenu.menu;
                 
-                console.log(menu);
                 if(menu){
                     dispatch({type:'SET_MENU', payload:menu});
+                    setLoading(false);
                 }
                 else{
                     console.log('menu not added');
@@ -31,8 +34,12 @@ const useFetch = ()=>{
             
         } catch (err) {
             setError(err.message);
+        }finally{
+            setLoading(false);
         }
+
+       
    }
-    return {error, fetchData}
+    return {loading, error, fetchData}
 }
 export default useFetch;

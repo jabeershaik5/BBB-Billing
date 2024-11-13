@@ -14,26 +14,27 @@ const useLogin = () => {
 
     const logIn = async(email, password) =>{
 
-        setLoading(true);
         setError(null);
         try {
-
+            setLoading(true);
             const userCreds = await signInWithEmailAndPassword(auth, email, password);
-            const user =  userCreds.user;
-            dispatch({type:"LOG_USER", payload:user});
-
+            
+            const user =  userCreds?.user;
+            console.log(user);
             //fetching the menu data
             if(user){
+                dispatch({type:"LOG_USER", payload:user});
+
                 const restaurantId = user.uid;
+
                 const docRef = doc(db, 'restaurants', restaurantId );
                 const restaurantMenu = await getDoc(docRef);
+                console.log(restaurantMenu);
                 const resMenu = restaurantMenu.data();
                 const menu = resMenu.menu;
                 
-                console.log(menu);
                 if(menu){
                     dispatch({type:'SET_MENU', payload:menu});
-                    console.log('menu added');
                 }
                 else{
                     console.log('menu not added');
@@ -43,9 +44,11 @@ const useLogin = () => {
         } catch (err) {
             setError(err.message);
             setLoading(true);
+            console.log(err);
             return false;
         }finally{
             setLoading(false);
+            
         }
     }
     

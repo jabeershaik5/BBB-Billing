@@ -1,3 +1,4 @@
+
 let initialState = {
     user: null,
     authReady: false
