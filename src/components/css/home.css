@@ -170,6 +170,7 @@ main{
     color:#1E1E1E;
     margin: 2rem 0;
 }
+
 .cart-header-print{
     border-bottom: 1ps solid black;
 }
@@ -187,4 +188,28 @@ main{
 }
 .cart-item-price, .cart-item-total{
     width:15%;
+}
+.company-name{
+    font-size: 1.6rem;
+    margin-bottom:0.5rem;
+    font-weight: 700;
+}
+.invoice-data{
+    padding-bottom:0.5rem;
+    border-bottom: 1px solid black;
+}
+
+.settings-print td{
+    border-right:1px solid black;
+}
+.settings-print .cart-row-print{
+    padding:1rem;
+}
+.settings-print .cart-header td{
+    border-right:none;
+}
+.settings-print .cart-header{
+    height:2rem;
+    padding-bottom: 0.5rem;
+    border-bottom:1px solid black;
 }

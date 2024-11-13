@@ -7,6 +7,7 @@ import printJS from 'print-js';
 import  html2pdf  from 'html2pdf.js';
 
 import TableComp from './TableComp';
+import { timeFormater } from '../utils/utils';
 
 
 const Cart = () => {
@@ -75,7 +76,7 @@ const Cart = () => {
           <img src="" alt="" />
         </div>
         <div className="receipt-address">
-          <p>BIG BUCKET BIRYANI</p>
+          <p class="company-name">BIG BUCKET BIRYANI</p>
           <div className="">
             <p>Trunk Road Opp to Governement Junior College</p>
             <p>Rayachoti 516269</p>
@@ -88,7 +89,7 @@ const Cart = () => {
               <div className="tax-invoice">Tax-Invoice</div>
               <p>Employee: Kaleem Shaik</p>
               <p>Invoice Number: RCT{Date.now()}</p>
-              <p>Date: {Date.now()}</p>
+              <p>Date: {timeFormater(new Date())}</p>
             </div>
             <div className="order-data">
               <TableComp row='cart-row-print' header='cart-header' settings='settings-print' />
