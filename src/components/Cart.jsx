@@ -9,7 +9,6 @@ import  html2pdf  from 'html2pdf.js';
 import TableComp from './TableComp';
 import { timeFormater } from '../utils/utils';
 
-
 const Cart = () => {
 
   const [total, setTotal] = useState(0);
@@ -24,7 +23,6 @@ const Cart = () => {
         return newTotal+=(item.price*item.quantity)
       });
       setTotal(newTotal);
-
     }
     cartTotal(cartItems);
   },[cartItems]);
@@ -69,6 +67,7 @@ const Cart = () => {
       <div className="checkout-btn-container">
         <button className='checkout-btn' onClick={()=> cartItems.length>0 &&handlePrint()}>{cartItems.length>0 ?'Check Out': 'Add Items'}</button>
       </div>
+      
       {/* hidden reciet to print */}
       <div className="reciept-wrapper">
       <div className='reciept' ref={printThis}>

@@ -11,9 +11,12 @@ function CategoryCard({item}) {
   const dispatch = useDispatch();
 
   const handleCategory = (id)=>{
-
-      let curCategory = menu.filter(item=> item.category === id);   
-      dispatch({type:'UPDATE_MENU', payload:curCategory});      
+    if(!menu){
+      alert('No menu to load. Please retry...');
+      return
+    }
+    let curCategory = menu.filter(item=> item.category === id);   
+    dispatch({type:'UPDATE_MENU', payload:curCategory});      
   }
 
   return (

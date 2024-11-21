@@ -184,6 +184,7 @@ main{
 
 .settings-print td{
     border-right:1px solid black;
+    height:20px;
 }
 .settings-print .cart-row-print{
     padding:1rem;

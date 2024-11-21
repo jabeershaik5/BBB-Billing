@@ -4,7 +4,6 @@ import { doc, getDoc } from 'firebase/firestore';
 
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { json } from 'react-router-dom';
 
 const useLogin = () => {
 
@@ -40,17 +39,14 @@ const useLogin = () => {
                     console.log('menu not added');
                 }  
             }
-
         } catch (err) {
             setError(err.code);
             setLoading(true);
             return false;
         }finally{
-            setLoading(false);
-            
+            setLoading(false);       
         }
     }
-    
     return { loading, error, logIn, setError}
 }
 
