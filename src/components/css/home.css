@@ -5,26 +5,10 @@ main{
     box-sizing: border-box;
     overflow: hidden;
 }
-.categories{
-    height:100%;
-    width:12%;
-    background-color: yellow;
-    padding:2rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-.category-heading{
-    font-size: 1.8rem;
-    font-weight: 600;
-    background-color: white;
-    color: #1E1E1E;
-    width:100%;
-    text-align: center;
-    padding:0.3rem 0;
-    user-select: none;
-}
+
+
+/* menu */
+
 .menu{
     max-width:60%;
     width:43%;
@@ -66,21 +50,14 @@ main{
 .retry-btn:active{
     transform: translateY(2px);
 }
-.category-title{
-    color:white;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    background-color: yellow;
-    color:black;
-    font-weight: 600;
-    padding:0 1rem;
-}
+
+/* cart */
 .cart{
     height:100%;
     background-color: #1E1E1E;
     width:45%;
     color:white;
-    font-size: 2rem;
+    font-size: 1.7rem;
     padding: 0 1rem;
     padding-top: 2rem;
     border-left:2px solid yellow;
@@ -104,25 +81,29 @@ main{
     padding:0.3rem 0.5rem;
 }
 .cart .cart-list{
-    height:70%;
+    height:72%;
     width:100%;
+    overflow-y:scroll;
+    scrollbar-color: black yellow;
+  scrollbar-width: thin;
 }
+
 .cart .checkout-btn-container{
     width:100%;
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
 .cart .checkout-btn-container .checkout-btn{
     width:90%;
     padding:1rem 2rem;
     margin-top:3rem;
-    margin-right:0.5rem;
     background-color: yellow;
     border: 1px solid transparent;
     outline:none;
     transition: transform 0.3s ease-out;
     cursor: pointer;
     margin-bottom: 100px;
+    align-self: center;
 }
 .cart .checkout-btn-container .checkout-btn:hover{
     transform: translateY(-4px);
@@ -162,7 +143,8 @@ main{
 }
 
 .settings-print{
-    font-size: 8px;
+    font-size: 14px;
+    margin-bottom: 20px;
 }
 .cart-header{
     height:4rem;
@@ -172,7 +154,8 @@ main{
 }
 
 .cart-header-print{
-    border-bottom: 1ps solid black;
+    border-bottom: 1px solid black;
+    font-weight: 600;
 }
 .cart-row td{
     padding:0.3rem 0.5rem;
@@ -212,4 +195,5 @@ main{
     height:2rem;
     padding-bottom: 0.5rem;
     border-bottom:1px solid black;
+    font-size: 15px;
 }

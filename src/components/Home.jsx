@@ -1,5 +1,6 @@
 import React from 'react';
 import './css/home.css';
+import './css/categories.css';
 import Categories from './Categories';
 import Menu from './Menu';
 import Cart from './Cart';

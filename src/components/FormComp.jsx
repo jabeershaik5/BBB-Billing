@@ -42,8 +42,7 @@ const FormComp = ({type, hook}) => {
         }
         email.current.value = '';
         pwd.current.value = '';
-        setValidation(false);
-        
+        setValidation(false);   
    }
 
     return (
@@ -55,7 +54,7 @@ const FormComp = ({type, hook}) => {
                 <input type="text" placeholder='Enter Email' ref={email} className='input' />
                 <input type="password" placeholder='Enter Password' ref={pwd} className='input' />
             </div>
-            {error && <p>{error}</p>}
+            {error && <p className="error-message">{error}</p>}
             <p>{loading&&'Loading'}</p>
             {
                 !validation&&<div className="error-message">Enter valid credentials</div>

@@ -36,11 +36,11 @@ const Cart = () => {
     const opt = {
       margin: 0,
       filename: 'download.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2 },
+      image: { type: 'jpeg', quality: 1 },
+      html2canvas: { scale: 12 },
       jsPDF: {
         unit: 'in',
-        format: [4, 7], // Custom size: width = 3 inches, height = 10 inches
+        format: [3, 7], // Custom size: width = 3 inches, height = 10 inches
         orientation: 'portrait'
       }
     };
@@ -78,10 +78,10 @@ const Cart = () => {
         <div className="receipt-address">
           <p class="company-name">BIG BUCKET BIRYANI</p>
           <div className="">
-            <p>Trunk Road Opp to Governement Junior College</p>
+            <p>Bangla circle Opp Government Junior College</p>
             <p>Rayachoti 516269</p>
             <p>Phone Number: 8885342718</p>
-            <p ><span className="rg-no">company Registration Number:</span> 37KHZPK8412C1ZR</p>
+            <p ><span className="rg-no">GSTIN:</span> 37KHZPK8412C1ZR</p>
           </div>
         </div>
         <div className="reciept-body">
@@ -100,6 +100,7 @@ const Cart = () => {
         </div>
         <div className="reciept-footer">
             <p>Developed by Jabeer Shaik</p>
+            <p>Contact: 8639998986</p>
         </div>
       </div>
       </div>

@@ -13,7 +13,7 @@ const TableComp = ({row,header,settings}) => {
             <tr className={`${row} ${header} `}>
               <td className='cart-sno'>S.No</td>
               <td className='cart-item-name'>Item</td>
-              <td className='cart-item-quantity'>Qnt.</td>
+              <td className='cart-item-quantity'>Qnt</td>
               <td className='cart-item-price'>Price</td>
               <td className='cart-item-total'>Total</td>
             </tr>

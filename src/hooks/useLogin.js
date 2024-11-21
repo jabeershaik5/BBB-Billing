@@ -4,6 +4,7 @@ import { doc, getDoc } from 'firebase/firestore';
 
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { json } from 'react-router-dom';
 
 const useLogin = () => {
 
@@ -20,7 +21,6 @@ const useLogin = () => {
             const userCreds = await signInWithEmailAndPassword(auth, email, password);
             
             const user =  userCreds?.user;
-            console.log(user);
             //fetching the menu data
             if(user){
                 dispatch({type:"LOG_USER", payload:user});
@@ -42,9 +42,8 @@ const useLogin = () => {
             }
 
         } catch (err) {
-            setError(err.message);
+            setError(err.code);
             setLoading(true);
-            console.log(err);
             return false;
         }finally{
             setLoading(false);
