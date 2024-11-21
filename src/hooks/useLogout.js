@@ -19,6 +19,7 @@ const useLogout = () =>{
 
             await signOut(auth);
             dispatch({type:'LOG_USER_OUT'})
+            dispatch({type:'SET_ADMIN', payload:false})
 
         }catch(err){
             setError(err.message);

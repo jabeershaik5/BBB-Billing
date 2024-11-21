@@ -1,58 +1,61 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import './css/cards.css'
-// import { useSelector } from 'react-redux';
 
-// import useAddToDb from '../hooks/useAddToDb';
+import useAddToDb from '../hooks/useAddToDb';
 
 const UpdateMenu = () => {
     
-    // const {addToDb, loading, error } = useAddToDb();
-    const item = useRef(null);
-    const price = useRef(null);
-    const category = useRef(null);
+    const {addToDb, loading, error } = useAddToDb();
+    const [fileContents, setFileContents] = useState(null);
+    const resId = useRef(null);
 
-    // const user = useSelector(state=> state.userReducer.user);
+    const handleChange=(e)=>{
+        const file = e.target.files[0];
 
-    const handleAddItem = (e)=>{
+        if(!file) return
+
+        if(!file.name.endsWith('.json')) return 
+
+        const reader = new FileReader();
+
+        reader.onload = ()=>{
+            try {
+                const parsedData = JSON.parse(reader.result);
+                console.log(parsedData);
+                setFileContents(parsedData);
+            } catch (err) {
+                alert('Something went wrong')
+            }
+        };
+        reader.readAsText(file);
+    }
+
+    const handleSubmit = (e)=>{
         e.preventDefault();
-
-        // addToDb(menu); //hook func to add to the database.
-
-
-
-        
-        //create an object to send to the database.
-        // const newItem = {
-        //     title: item.current.value,
-        //     price: price.current.value,
-        //     userId: user.uid,
-        //     categoryId:category.current.value,
-        //     itemId:Date.now()
-        // }
-        // item.current.value='';
-        // price.current.value='';
-        // category.current.value='';
-
-        console.log('added the menu');
+        console.log(fileContents);
+        if(!fileContents){
+            alert('Please Select a file');
+            return
+        }
+        addToDb(fileContents.menu, resId.current.value); //hook func to add to the database.
+        resId.current.value='';
     }
 
   return (
-    <div className='update-menu-page' onSubmit={handleAddItem}>
+    <div className='update-menu-page' onSubmit={handleSubmit}>
         
         <form action="" className='menu-form'>
-            <p className='menu-form-title'>ADD ITEM</p>
+            <p className='menu-form-title'>ADD MENU</p>
             <div className="form-input">
-                <label htmlFor="item-name">Item Name :</label>
-                <input type="text" className="input" id="item-name" placeholder='Dum Biryani' ref={item} />
+                <label htmlFor="resId">Restaurant ID</label>
+                <input type="text" className="input" id="resId" ref={resId} />
             </div>
             <div className="form-input">
-                <label htmlFor="item-price">Item Price :</label>
-                <input type="number" className="input" id="item-price" placeholder='250' ref={price} />
+                <label htmlFor="file" className='custom-file'>Select a file</label>
+                <input type="file" className="input file-inp" id="file" accept='.json' onChange={handleChange}  />
             </div>
-            <div className="form-input">
-                <label htmlFor="item-category">category: How many person :</label>
-                <input type="number" className="input" id="item-category" placeholder='Enter numbers only... Ex: 1' ref={category} />
-            </div>
+            {loading&& <p>Loading...</p>}
+            {error && <p>error</p>}
             <button className='update-menu-btn'>Add Item</button>
         </form>
     </div>

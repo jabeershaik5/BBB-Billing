@@ -22,23 +22,19 @@ const useFetch = ()=>{
                 const restaurantMenu = await getDoc(docRef);
                 const resMenu = restaurantMenu.data();
                 const menu = resMenu.menu;
-                
+                const admin = resMenu?.admin;
                 if(menu){
+                    dispatch({type:'SET_ADMIN', payload:admin});
                     dispatch({type:'SET_MENU', payload:menu});
-                    setLoading(false);
+                }else{
+                    setError('Something went wrong');
                 }
-                else{
-                    console.log('menu not added');
-                }  
-            }
-            
+            }    
         } catch (err) {
             setError(err.message);
         }finally{
             setLoading(false);
-        }
-
-       
+        }       
    }
     return {loading, error, fetchData}
 }

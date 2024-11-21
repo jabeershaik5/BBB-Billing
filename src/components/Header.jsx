@@ -10,6 +10,7 @@ import { Link, useNavigate } from 'react-router-dom';
 function Header() {   
 
     const loggedUser = useSelector((state) => state.userReducer.user);
+    const admin = useSelector(state => state.userReducer.admin);
     const dispatch = useDispatch();
     const { logout } = useLogout();
     const navigate = useNavigate();
@@ -32,7 +33,7 @@ function Header() {
                 {!loggedUser && <li><Link to='/Login' className='Link'>Login</Link></li>}
                 {!loggedUser && <li><Link to='/Signup' className='Link'>Signup</Link></li>}
                 {loggedUser && <li><Link to='/History' className='Link'>History</Link></li>}
-                {loggedUser && <li><Link to='/update-menu' className='Link'>Update Menu</Link></li>}
+                {admin && <li><Link to='/update-menu' className='Link'>Update Menu</Link></li>}
                 {loggedUser && <li onClick={handleLogout}>Logout</li>}
                 
             </ul>

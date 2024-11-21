@@ -21,3 +21,20 @@
     border:1px solid #1E1E1E;
     color:#1E1E1E;
 }
+.file-inp{
+    display: none;
+}
+.custom-file{
+    background-color: black;
+    color:yellow !important;
+    padding:1rem;
+    border:1px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 1.4rem !important;
+}
+.custom-file:hover{
+    background-color: white;
+    color:black !important;
+    border-color:black;
+}

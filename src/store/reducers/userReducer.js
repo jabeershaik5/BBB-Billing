@@ -1,6 +1,7 @@
 
 let initialState = {
     user: null,
+    admin:false,
     authReady: false
 }
 
@@ -12,6 +13,8 @@ export const userReducer = (state= initialState, action)=>{
             return {...state, user:null}
         case "AUTH_IS_READY":
             return {...state, user:action.payload, authReady:true}
+        case "SET_ADMIN":
+            return {...state, admin:action.payload}
         default:
             return state;
     }

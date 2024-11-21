@@ -2,14 +2,12 @@ import React, { useState } from 'react'
 import './css/auth.css';
 
 import { useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 const FormComp = ({type, hook}) => {
 
     //keeping track of the input values
     const email = useRef(null);
     const pwd = useRef(null);
-    const navigate = useNavigate();
     
     const [validation, setValidation] = useState(true);
 
@@ -36,7 +34,6 @@ const FormComp = ({type, hook}) => {
         const creds = [emailId, pswd];
         if(validateCreds(creds)){
             func(emailId, pswd);
-            navigate('/');
             setValidation(true);
             return
         }
@@ -55,7 +52,7 @@ const FormComp = ({type, hook}) => {
                 <input type="password" placeholder='Enter Password' ref={pwd} className='input' />
             </div>
             {error && <p className="error-message">{error}</p>}
-            <p>{loading&&'Loading'}</p>
+            <p className='loading-message'>{loading&&'Loading'}</p>
             {
                 !validation&&<div className="error-message">Enter valid credentials</div>
             }

@@ -10,21 +10,15 @@ const useAddtoDb = (data)=>{
 
     const user = useSelector(state=> state.userReducer.user);
 
-    const addToDb = async(menuNew)=>{
+    const addToDb = async(menuNew, id)=>{
         setError(null);
         setLoading(true)
-
         try{
             if(user){
-                const restaurantId = user.uid;
-                const docRef = doc(db, 'restaurants', restaurantId);
-
+                const docRef = doc(db, 'restaurants', id);
                 await updateDoc(docRef, {menu:menuNew});
             }
-
-
         }catch(err){
-            console.log(err.message);
             setError(err.message);
         }finally{
             setLoading(false);

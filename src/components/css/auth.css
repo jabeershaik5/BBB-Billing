@@ -58,6 +58,9 @@
     color: red;
     font-size: 1.4rem;
 }
+.loading-message{
+    font-size: 1.4rem;
+}
 
 @keyframes bounce {
     0%{

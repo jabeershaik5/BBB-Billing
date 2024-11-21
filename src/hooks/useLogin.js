@@ -3,12 +3,14 @@ import { db, auth } from '../db/db';
 import { doc, getDoc } from 'firebase/firestore';
 
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
 const useLogin = () => {
 
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
 
     const dispatch = useDispatch();
 
@@ -22,8 +24,6 @@ const useLogin = () => {
             const user =  userCreds?.user;
             //fetching the menu data
             if(user){
-                dispatch({type:"LOG_USER", payload:user});
-
                 const restaurantId = user.uid;
 
                 const docRef = doc(db, 'restaurants', restaurantId );
@@ -31,20 +31,20 @@ const useLogin = () => {
                 console.log(restaurantMenu);
                 const resMenu = restaurantMenu.data();
                 const menu = resMenu.menu;
-                
+                const admin = resMenu.admin;                
                 if(menu){
+                    dispatch({type:"LOG_USER", payload:user});
+                    dispatch({type:'SET_ADMIN', payload:admin});
                     dispatch({type:'SET_MENU', payload:menu});
-                }
-                else{
-                    console.log('menu not added');
-                }  
+                } 
             }
         } catch (err) {
             setError(err.code);
             setLoading(true);
             return false;
         }finally{
-            setLoading(false);       
+            setLoading(false);
+            navigate('/');      
         }
     }
     return { loading, error, logIn, setError}

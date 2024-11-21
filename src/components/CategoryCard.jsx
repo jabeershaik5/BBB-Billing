@@ -11,7 +11,7 @@ function CategoryCard({item}) {
   const dispatch = useDispatch();
 
   const handleCategory = (id)=>{
-    if(!menu){
+    if(!menu || !Array.isArray(menu)){
       alert('No menu to load. Please retry...');
       return
     }

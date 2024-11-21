@@ -8,7 +8,7 @@ function Menu() {
   const menuItems = useSelector(state=> state.dataReducer.menuData);
   const menu = useSelector(state=> state.dataReducer.menu);
   const { loading, fetchData} = useFetch();
-
+ 
   useEffect(()=>{
     if(!menu){
       fetchData();

@@ -19,6 +19,7 @@ import './App.css';
 function App() {
 
   const user = useSelector(state => state.userReducer.user);
+  const admin = useSelector(state => state.userReducer.admin);
   const authReady = useSelector(state=> state.userReducer.authReady);
   const dispatch = useDispatch();
 
@@ -38,8 +39,8 @@ function App() {
           <Route path='/' element={user? <Home /> : <Login />} />
           <Route path='/login' element={!user ? <Login />: <Home />} />
           <Route path='/signup' element={!user ? <Signup /> : <Home />} />
-          <Route path='/history' element={!user ? <Signup /> : <History />} />
-          <Route path='/update-menu' element={!user ? <Signup /> : <UpdateMenu />} />
+          <Route path='/history' element={!user ? <Login /> : <History />} />
+          <Route path='/update-menu' element={user? admin ? <UpdateMenu /> : <Home />: <Login />} />
           <Route path='/upload' element={!user? <AdminC />: <Home />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
