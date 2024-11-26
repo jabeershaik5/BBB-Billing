@@ -13,10 +13,12 @@ main{
     max-width:60%;
     width:43%;
     padding:2rem 1rem;
+    height:auto;
     background-color: #1E1E1E;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 .menu-card-container{
-    height:100%;
     width:100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -24,6 +26,7 @@ main{
     grid-row-gap:2rem;
     justify-items: center;
     align-items: top;
+    padding-bottom:2rem;
     
 }
 .menu .category-prompt{
@@ -93,28 +96,27 @@ main{
     width:100%;
     overflow-y:scroll;
     scrollbar-color: black yellow;
-  scrollbar-width: thin;
+    scrollbar-width: thin;
 }
 
 .cart .checkout-btn-container{
     width:100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    margin-bottom:100px;
 }
 .cart .checkout-btn-container .checkout-btn{
-    width:90%;
+    width:40%;
     padding:1rem 2rem;
-    margin-top:3rem;
     background-color: yellow;
     border: 1px solid transparent;
     outline:none;
     transition: transform 0.3s ease-out;
     cursor: pointer;
-    margin-bottom: 100px;
     align-self: center;
+    margin:1rem 0;
 }
 .cart .checkout-btn-container .checkout-btn:hover{
-    transform: translateY(-4px);
     color: yellow;
     background-color:transparent;
     border:1px solid yellow;
@@ -136,7 +138,6 @@ main{
     margin: 0 0.5rem;
     
 }
-
 .cart-table{
     height:auto;
     width:100%;
@@ -150,7 +151,7 @@ main{
     background-color: white;
 }
 
-.settings-print{
+.settings-print, .kot-print{
     font-size: 14px;
     margin-bottom: 20px;
 }
@@ -189,20 +190,28 @@ main{
     padding-bottom:0.5rem;
     border-bottom: 1px solid black;
 }
-
-.settings-print td{
+.bolds{
+    font-weight: 600;
+}
+.settings-print td , .kot-print td{
     border-right:1px solid black;
     height:20px;
 }
-.settings-print .cart-row-print{
+.settings-print .cart-row-print, .kot-print .cart-row-print{
     padding:1rem;
 }
-.settings-print .cart-header td{
+.settings-print .cart-header td, .kot-print .cart-header td{
     border-right:none;
 }
-.settings-print .cart-header{
+.settings-print .cart-header, .kot-print .cart-header{
     height:2rem;
     padding-bottom: 0.5rem;
     border-bottom:1px solid black;
     font-size: 15px;
+}
+.kot-greet{
+    width:100%;
+    justify-self: center;
+    font-size: 14px;
+    text-align: center;
 }

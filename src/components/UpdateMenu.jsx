@@ -21,7 +21,6 @@ const UpdateMenu = () => {
         reader.onload = ()=>{
             try {
                 const parsedData = JSON.parse(reader.result);
-                console.log(parsedData);
                 setFileContents(parsedData);
             } catch (err) {
                 alert('Something went wrong')

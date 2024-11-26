@@ -20,7 +20,6 @@
 .reciept .reciept-logo{
     height:50px;
     width:70px;
-    background-color: blue;
 }
 .receipt-address{
     text-align: center;
@@ -93,4 +92,7 @@
 .reciept-footer{
     font-size: 12px;
     justify-items: center;
+}
+.kot-print tbody tr td:last-child, td:nth-child(4){
+    display: none;
 }

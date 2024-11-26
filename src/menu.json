@@ -211,6 +211,111 @@
             "itemId":"06-05"
         },
         {
+            "title":"Chicken Fry",
+            "price":200,
+            "category":6,
+            "uid":"BBB",
+            "itemId":"07-01"
+        },
+        {
+            "title":"Chicken Manchurian",
+            "price":200,
+            "category":6,
+            "uid":"BBB",
+            "itemId":"07-02"
+        },
+        {
+            "title":"Chilli Chicken",
+            "price":200,
+            "category":6,
+            "uid":"BBB",
+            "itemId":"07-03"
+        },
+        {
+            "title":"Chicken 65",
+            "price":220,
+            "category":6,
+            "uid":"BBB",
+            "itemId":"07-04"
+        },
+        {
+            "title":"Chicken 555",
+            "price":210,
+            "category":6,
+            "uid":"BBB",
+            "itemId":"07-05"
+        },
+        {
+            "title":"Chicken Majestic",
+            "price":210,
+            "category":6,
+            "uid":"BBB",
+            "itemId":"07-06"
+        },
+        {
+            "title":"Lemon Chicken",
+            "price":200,
+            "category":6,
+            "uid":"BBB",
+            "itemId":"07-07"
+        },
+        {
+            "title":"Chicke Lollipop",
+            "price":240,
+            "category":6,
+            "uid":"BBB",
+            "itemId":"07-08"
+        },
+        {
+            "title":"Garlic Chicken",
+            "price":200,
+            "category":6,
+            "uid":"BBB",
+            "itemId":"07-09"
+        },
+        {
+            "title":"Gobi Manchurian",
+            "price":150,
+            "category":6,
+            "uid":"BBB",
+            "itemId":"07-10"
+        },
+        {
+            "title":"Gobi 65",
+            "price":150,
+            "category":6,
+            "uid":"BBB",
+            "itemId":"07-11"
+        },
+        {
+            "title":"Gobi Chilli",
+            "price":150,
+            "category":6,
+            "uid":"BBB",
+            "itemId":"07-12"
+        },
+        {
+            "title":"Paneer Manchurian",
+            "price":200,
+            "category":6,
+            "uid":"BBB",
+            "itemId":"07-13"
+        },
+        {
+            "title":"Paneer 65",
+            "price":200,
+            "category":6,
+            "uid":"BBB",
+            "itemId":"07-14"
+        },
+        {
+            "title":"Paneer Chilli",
+            "price":200,
+            "category":6,
+            "uid":"BBB",
+            "itemId":"07-15"
+        },
+        {
             "title":"special",
             "price":100,
             "category": 7,
