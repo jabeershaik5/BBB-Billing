@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+import './css/history.css'
 
 function History() {
   return (
-    <div>History</div>
+    <main>
+      <div className="history-page">
+        <p className='progress-message'>Work in progress...</p>
+      </div>
+    </main>
   )
 }
 

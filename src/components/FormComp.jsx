@@ -52,9 +52,9 @@ const FormComp = ({type, hook}) => {
                 <input type="password" placeholder='Enter Password' ref={pwd} className='input' />
             </div>
             {error && <p className="error-message">{error}</p>}
-            <p className='loading-message'>{loading&&'Loading'}</p>
+            <p className='loading-message'>{loading&&'Loading...'}</p>
             {
-                !validation&&<div className="error-message">Enter valid credentials</div>
+            !validation&&<div className="error-message">Enter valid credentials</div>
             }
             <button className='submit-btn' type='submit'>{type}</button>
         </form>

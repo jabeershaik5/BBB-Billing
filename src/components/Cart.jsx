@@ -28,7 +28,6 @@ const Cart = () => {
   },[cartItems]);
 
   const handlePrint = ()=>{
-    
     // printJS('printThis', 'html');
     const element = printThis.current;
     const opt = {
@@ -54,18 +53,32 @@ const Cart = () => {
     });
     dispatch({type:'CLEAR_CART'});
   }
+  
+  const handleCheckout =()=>{
+    if(cartItems.length<=0){
+      alert('Please add items to the cart...');
+      return
+    }
+    handlePrint();
+  }
 
   return (
     <div className='cart'>
       <div className="cart-title">
       <p className=''>CART &#128722;</p>
-      <p className='cart-total'>Total: <span className="cart-total-price">{total} R.s</span></p>
+      <span className='cart-total'>Total: <span className="cart-total-price">
+        {total}
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6 rupee-icon">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 8.25H9m6 3H9m3 6-3-3h1.5a3 3 0 1 0 0-6M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>
+        </span>
+      </span>
       </div>
       <div className="cart-list">
         <TableComp row='cart-row' header='cart-header' settings='settings' />
       </div>
       <div className="checkout-btn-container">
-        <button className='checkout-btn' onClick={()=> cartItems.length>0 &&handlePrint()}>{cartItems.length>0 ?'Check Out': 'Add Items'}</button>
+        <button className='checkout-btn' onClick={handleCheckout}>{cartItems.length>0 ?'Check Out': 'Add Items'}</button>
       </div>
       
       {/* hidden reciet to print */}
@@ -75,7 +88,7 @@ const Cart = () => {
           <img src="" alt="" />
         </div>
         <div className="receipt-address">
-          <p class="company-name">BIG BUCKET BIRYANI</p>
+          <p className="company-name">BIG BUCKET BIRYANI</p>
           <div className="">
             <p>Bangla circle Opp Government Junior College</p>
             <p>Rayachoti 516269</p>
@@ -94,7 +107,12 @@ const Cart = () => {
               <TableComp row='cart-row-print' header='cart-header' settings='settings-print' />
             </div>
             <div className="total">
-              <p>Total: R.s {total}</p>
+              <span className="reciept-total">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6 rupee-icon">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 8.25H9m6 3H9m3 6-3-3h1.5a3 3 0 1 0 0-6M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <span>Total: {total}</span>
+              </span>
             </div>
         </div>
         <div className="reciept-footer">

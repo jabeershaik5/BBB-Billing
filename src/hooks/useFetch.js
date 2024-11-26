@@ -23,6 +23,7 @@ const useFetch = ()=>{
                 const resMenu = restaurantMenu.data();
                 const menu = resMenu.menu;
                 const admin = resMenu?.admin;
+                
                 if(menu){
                     dispatch({type:'SET_ADMIN', payload:admin});
                     dispatch({type:'SET_MENU', payload:menu});

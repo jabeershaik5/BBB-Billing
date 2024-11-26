@@ -1,0 +1,27 @@
+.history-page{
+    height:100%;
+    width:100%;
+    background-color: #1E1E1E;
+    color:white;
+    padding:2rem;
+    display: flex;
+    justify-content: center;
+}
+.progress-message{
+    font-size: 3rem;
+    font-weight: 600;
+    transform: translateY(30%);
+    animation: fade 3s ease infinite;
+}
+
+@keyframes fade{
+    0%{
+        opacity:0;
+    }
+    50%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}

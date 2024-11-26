@@ -74,11 +74,19 @@ main{
 .cart-total{
     font-size: 1.8rem;
     margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+.rupee-icon{
+    height:2.5rem;
+    width:2.5rem;
 }
 .cart-total-price{
     color:#1E1E1E;
     background-color: yellow;
     padding:0.3rem 0.5rem;
+    display: flex;
+    align-items: center;
 }
 .cart .cart-list{
     height:72%;

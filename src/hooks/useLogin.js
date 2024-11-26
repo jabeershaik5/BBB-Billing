@@ -31,17 +31,21 @@ const useLogin = () => {
                 console.log(restaurantMenu);
                 const resMenu = restaurantMenu.data();
                 const menu = resMenu.menu;
-                const admin = resMenu.admin;                
+                const admin = resMenu?.admin || false;
+
                 if(menu){
-                    dispatch({type:"LOG_USER", payload:user});
                     dispatch({type:'SET_ADMIN', payload:admin});
                     dispatch({type:'SET_MENU', payload:menu});
-                } 
+                };
+                user.admin = admin;
+                dispatch({type:"LOG_USER", payload:user});
             }
         } catch (err) {
+
             setError(err.code);
             setLoading(true);
             return false;
+
         }finally{
             setLoading(false);
             navigate('/');      
