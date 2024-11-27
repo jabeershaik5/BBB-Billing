@@ -5,7 +5,7 @@
     max-height:5rem;
     width:12rem;
     background-color: #1E1E1E;
-    color:yellow;
+    color:rgb(236, 236, 9);
     margin:1rem 0;
     font-size: 2rem;
     font-weight: 600;
@@ -18,7 +18,7 @@
     border:2px solid transparent;
 }
 .category-card:hover{
-    background-color: yellow;
+    background-color: rgb(236, 236, 9);
     color: #1E1E1E;
     border:2px solid #1E1E1E;
 }
@@ -28,7 +28,7 @@
 .menu-card{
     height: 12rem;
     width:15rem;
-    background-color: yellow;
+    background-color: rgb(236, 236, 9);
     color:black;
     border-radius: 4px;
     overflow: hidden;
@@ -36,7 +36,7 @@
 .menu-card .title-container{
     height:70%;
     width:100%;
-    background-color: yellow;
+    background-color: rgb(236, 236, 9);
     color: #1E1E1E;
     font-size: 1.9rem;
     text-align: left;
@@ -74,7 +74,7 @@
     
 }
 .menu-card .counter button:hover{
-    background-color: yellow;
+    background-color: rgb(236, 236, 9);
     color:#1E1E1E;
 }
 
@@ -90,7 +90,7 @@
 .menu-form{
     height:auto;
     width:50rem;
-    background-color: yellow;
+    background-color: rgb(236, 236, 9);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,7 +127,7 @@
 .update-menu-btn{
     padding:1rem 2rem;
     background-color: #1E1E1E;
-    color:yellow;
+    color:rgb(236, 236, 9);
     border:none;
     outline: none;
     margin:1rem 0;
@@ -140,5 +140,5 @@
     transform: translateY(2px);
     color:#1E1E1E;
     border:1px solid #1E1E1E;
-    background-color: yellow;
+    background-color: rgb(236, 236, 9);
 }

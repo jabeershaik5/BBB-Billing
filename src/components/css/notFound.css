@@ -13,7 +13,7 @@
 }
 .go-back-btn{
     background-color: #1E1E1E;
-    color:yellow !important;
+    color:rgb(236, 236, 9) !important;
     width:auto;
     align-self: center;
     font-size: 2rem;
@@ -25,7 +25,7 @@
 .go-back-btn:hover{
     color:#1E1E1E !important;
     border: 2px solid #1E1E1E;
-    background-color: yellow;
+    background-color: rgb(236, 236, 9);
 }
 .go-back-btn:active{
     transform: translateY(2px);

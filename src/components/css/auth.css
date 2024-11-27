@@ -9,7 +9,7 @@
 .form{
     width:40rem;
     height:30rem;
-    background-color: yellow;
+    background-color: rgb(236, 236, 9);
     border-radius: 5px;
     text-align: center;
     padding:1rem 2rem;
@@ -40,7 +40,7 @@
     border:2px solid transparent;
 }
 .form .submit-btn:hover{
-    background-color: yellow;
+    background-color: rgb(236, 236, 9);
     border:2px solid black;
     color:black;
     cursor: pointer;

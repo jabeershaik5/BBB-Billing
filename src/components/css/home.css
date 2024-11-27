@@ -37,7 +37,7 @@ main{
 }
 .retry-btn{
     padding:1rem 2rem;
-    background-color: yellow;
+    background-color: rgb(236, 236, 9);
     color:black;
     font-size: 1.8rem;
     border:1px solid transparent;
@@ -47,8 +47,8 @@ main{
 }
 .retry-btn:hover{
     background-color: transparent;
-    color:yellow;
-    border:1px solid yellow;
+    color:rgb(236, 236, 9);
+    border:1px solid rgb(236, 236, 9);
 }
 .retry-btn:active{
     transform: translateY(2px);
@@ -63,7 +63,7 @@ main{
     font-size: 1.7rem;
     padding: 0 1rem;
     padding-top: 2rem;
-    border-left:2px solid yellow;
+    border-left:2px solid rgb(236, 236, 9);
     overflow: hidden;
     position: relative;
 }
@@ -86,7 +86,7 @@ main{
 }
 .cart-total-price{
     color:#1E1E1E;
-    background-color: yellow;
+    background-color: rgb(236, 236, 9);
     padding:0.3rem 0.5rem;
     display: flex;
     align-items: center;
@@ -95,7 +95,7 @@ main{
     height:72%;
     width:100%;
     overflow-y:scroll;
-    scrollbar-color: black yellow;
+    scrollbar-color: black rgb(236, 236, 9);
     scrollbar-width: thin;
 }
 
@@ -108,7 +108,7 @@ main{
 .cart .checkout-btn-container .checkout-btn{
     width:40%;
     padding:1rem 2rem;
-    background-color: yellow;
+    background-color: rgb(236, 236, 9);
     border: 1px solid transparent;
     outline:none;
     transition: transform 0.3s ease-out;
@@ -117,9 +117,9 @@ main{
     margin:1rem 0;
 }
 .cart .checkout-btn-container .checkout-btn:hover{
-    color: yellow;
+    color: rgb(236, 236, 9);
     background-color:transparent;
-    border:1px solid yellow;
+    border:1px solid rgb(236, 236, 9);
 }
 .cart .checkout-btn-container .checkout-btn:active{
     transform:translateY(2px);
@@ -130,7 +130,7 @@ main{
     justify-content: space-between;
     padding:0.5rem 0;
     color:#1E1E1E;
-    background-color: yellow;
+    background-color: rgb(236, 236, 9);
     padding:1rem;
     margin:1rem 0;
 }
@@ -145,7 +145,7 @@ main{
 }
 
 .cart-row{
-    background-color: yellow;
+    background-color: rgb(236, 236, 9);
 }
 .cart-row-print{
     background-color: white;

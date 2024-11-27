@@ -1,6 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './css/home.css';
-import './css/print.css';
 
 import { useSelector, useDispatch } from 'react-redux';
 import printJS from 'print-js';
@@ -9,15 +7,19 @@ import  html2pdf  from 'html2pdf.js';
 import TableComp from './TableComp';
 import { timeFormater } from '../utils/utils';
 
+import './css/home.css';
+import './css/print.css';
+
 const Cart = () => {
 
   const [total, setTotal] = useState(0);
   const cartItems = useSelector(state=> state.cartReducer.cartItems);
-  const billType = useSelector(state=> state.dataReducer.billType);
+  const billType = useSelector(state=> state.dataReducer.billType); //kot bill or plain. true for plain.
   const dispatch = useDispatch();
-  const printThis = useRef();
+  const printThis = useRef(); //refs to the bill to be printed
   
   useEffect(()=>{
+    //calculates total everytime the cart state changes
     const cartTotal = (cartItems)=>{
       let newTotal = 0;
       cartItems.map(item=>{
@@ -51,7 +53,9 @@ const Cart = () => {
       }, 1000);
     });
 
-    dispatch({type:'CLEAR_CART'});
+    setTimeout(() => {
+      dispatch({type:'CLEAR_CART'});
+    }, 1000); //clears cart at the end
   }
   
   const handleCheckout =(e)=>{
@@ -60,6 +64,7 @@ const Cart = () => {
       return
     }
     const kot = e.target.classList.contains('kot-btn');
+    //checks if bill type is kot
 
     if(kot){
       dispatch({type:"SET_BILL_TYPE", payload:false})
@@ -69,7 +74,7 @@ const Cart = () => {
 
     setTimeout(() => {
       handlePrint();
-    }, 0);
+    }, 0); //helps to print only after the redux state is updated for the bill type
   }
 
   return (

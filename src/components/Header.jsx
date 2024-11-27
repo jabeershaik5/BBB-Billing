@@ -33,7 +33,7 @@ function Header() {
                 <li onClick={(handleToHome)}>Home</li>
                 {!loggedUser && <li><Link to='/Login' className='Link'>Login</Link></li>}
                 {!loggedUser && <li><Link to='/Signup' className='Link'>Signup</Link></li>}
-                {loggedUser && <li><Link to='/History' className='Link'>History</Link></li>}
+                {loggedUser && <li><Link to='/history' className='Link'>History</Link></li>}
                 {admin && <li><Link to='/update-menu' className='Link'>Update Menu</Link></li>}
                 {loggedUser && <li onClick={handleLogout}>Logout</li>}
                 

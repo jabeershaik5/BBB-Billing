@@ -9,7 +9,6 @@ import Signup from './components/Signup';
 import History from './components/History';
 import Home from './components/Home';
 import UpdateMenu from './components/UpdateMenu';
-import AdminC from './components/AdminC';
 import NotFound from './components/NotFound';
 
 import { auth } from './db/db';
@@ -42,7 +41,6 @@ function App() {
           <Route path='/signup' element={!user ? <Signup /> : <Home />} />
           <Route path='/history' element={!user ? <Login /> : <History />} />
           <Route path='/update-menu' element={user? admin ? <UpdateMenu /> : <Home />: <Login />} />
-          <Route path='/upload' element={!user? <AdminC />: <Home />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
         </React.Fragment>)}
