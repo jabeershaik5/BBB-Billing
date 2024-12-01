@@ -28,14 +28,15 @@ const useLogin = () => {
 
                 const docRef = doc(db, 'restaurants', restaurantId );
                 const restaurantMenu = await getDoc(docRef);
-                console.log(restaurantMenu);
                 const resMenu = restaurantMenu.data();
                 const menu = resMenu.menu;
+                const historyData = resMenu?.history;
                 const admin = resMenu?.admin || false;
 
                 if(menu){
                     dispatch({type:'SET_ADMIN', payload:admin});
                     dispatch({type:'SET_MENU', payload:menu});
+                    dispatch({type:'SET_HISTORY', payload:historyData});
                 };
                 user.admin = admin;
                 dispatch({type:"LOG_USER", payload:user});

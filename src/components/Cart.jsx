@@ -6,6 +6,7 @@ import  html2pdf  from 'html2pdf.js';
 
 import TableComp from './TableComp';
 import { timeFormater } from '../utils/utils';
+import useAddHistory from '../hooks/useAddHistory';
 
 import './css/home.css';
 import './css/print.css';
@@ -17,6 +18,7 @@ const Cart = () => {
   const billType = useSelector(state=> state.dataReducer.billType); //kot bill or plain. true for plain.
   const dispatch = useDispatch();
   const printThis = useRef(); //refs to the bill to be printed
+  const { updateHistory } = useAddHistory();
   
   useEffect(()=>{
     //calculates total everytime the cart state changes
@@ -71,23 +73,33 @@ const Cart = () => {
     }else{
       dispatch({type:"SET_BILL_TYPE", payload:true})
     }
-
+    //add to database
+    // updateHistory(cartItems);
     setTimeout(() => {
       handlePrint();
     }, 0); //helps to print only after the redux state is updated for the bill type
+  }
+
+  const handleClearCart = ()=>{
+    dispatch({type:'CLEAR_CART'});
   }
 
   return (
     <div className='cart'>
       <div className="cart-title">
       <p className=''>CART &#128722;</p>
-      <span className='cart-total'>Total: <span className="cart-total-price">
-        {total}
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6 rupee-icon">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M15 8.25H9m6 3H9m3 6-3-3h1.5a3 3 0 1 0 0-6M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-        </svg>
+      <div className='current-cart-data'>
+        <span className='cart-total'>Total: <span className="cart-total-price">
+          {total}
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6 rupee-icon">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 8.25H9m6 3H9m3 6-3-3h1.5a3 3 0 1 0 0-6M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+          </svg>
+          </span>
         </span>
-      </span>
+        {
+          cartItems.length>0 && <button onClick={handleClearCart} className='clear-btn'>Clear Cart</button>
+        }
+      </div>
       </div>
       <div className="cart-list">
         <TableComp row='cart-row' header='cart-header' settings='settings' />

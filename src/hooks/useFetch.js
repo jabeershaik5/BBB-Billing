@@ -23,10 +23,12 @@ const useFetch = ()=>{
                 const resMenu = restaurantMenu.data();
                 const menu = resMenu.menu;
                 const admin = resMenu?.admin;
+                const historyData = resMenu.history;
                 
                 if(menu){
                     dispatch({type:'SET_ADMIN', payload:admin});
                     dispatch({type:'SET_MENU', payload:menu});
+                    dispatch({type:'SET_HISTORY', payload:historyData});
                 }else{
                     setError('Something went wrong');
                 }

@@ -10,6 +10,7 @@ import History from './components/History';
 import Home from './components/Home';
 import UpdateMenu from './components/UpdateMenu';
 import NotFound from './components/NotFound';
+import Customize from './components/Customize';
 
 import { auth } from './db/db';
 
@@ -40,6 +41,7 @@ function App() {
           <Route path='/login' element={!user ? <Login />: <Home />} />
           <Route path='/signup' element={!user ? <Signup /> : <Home />} />
           <Route path='/history' element={!user ? <Login /> : <History />} />
+          <Route path='/customize' element={!user ? <Login /> : <Customize />} />
           <Route path='/update-menu' element={user? admin ? <UpdateMenu /> : <Home />: <Login />} />
           <Route path='*' element={<NotFound />} />
         </Routes>

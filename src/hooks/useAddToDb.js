@@ -12,7 +12,7 @@ const useAddtoDb = (data)=>{
 
     const addToDb = async(menuNew, id)=>{
         setError(null);
-        setLoading(true)
+        setLoading(true);
         try{
             if(user){
                 const docRef = doc(db, 'restaurants', id);

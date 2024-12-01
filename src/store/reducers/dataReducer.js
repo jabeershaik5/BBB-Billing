@@ -2,6 +2,7 @@ let initialstate = {
     menu: null,
     menuData:null,
     billType:null,
+    history:null,
     categories: [
         {
             id:1,
@@ -42,6 +43,8 @@ export const dataReducer = (state = initialstate, action)=>{
             return {...state, menuData:action.payload}
         case "SET_BILL_TYPE":
             return {...state, billType:action.payload}
+        case "SET_HISTORY":
+            return {...state, history:action.payload}
         default:
             return state;
     }

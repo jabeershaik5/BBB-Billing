@@ -6,7 +6,7 @@ import './css/print.css';
 import { useSelector } from 'react-redux';
 const TableComp = ({row,header,settings}) => {
 
-    const cartItems = useSelector(state=> state.cartReducer.cartItems);
+  const cartItems = useSelector(state=> state.cartReducer.cartItems);
   return (
     <table className={`cart-table ${settings}`}>
           <tbody>

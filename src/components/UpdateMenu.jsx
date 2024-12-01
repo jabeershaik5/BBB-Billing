@@ -31,7 +31,6 @@ const UpdateMenu = () => {
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-        console.log(fileContents);
         if(!fileContents){
             alert('Please Select a file');
             return
@@ -42,7 +41,6 @@ const UpdateMenu = () => {
 
   return (
     <div className='update-menu-page' onSubmit={handleSubmit}>
-        
         <form action="" className='menu-form'>
             <p className='menu-form-title'>ADD MENU</p>
             <div className="form-input">

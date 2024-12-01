@@ -124,6 +124,16 @@ main{
 .cart .checkout-btn-container .checkout-btn:active{
     transform:translateY(2px);
 }
+.current-cart-data{
+    display: flex;
+}
+.current-cart-data .clear-btn{
+    padding: 0 0.8rem;
+    background-color: rgb(236, 236, 9);
+    border:none;
+    outline:none;
+    font-size: 1.6rem;
+}
 .cart .cart-item{
     font-size: 1.8rem;
     display: flex;

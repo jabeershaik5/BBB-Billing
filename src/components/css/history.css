@@ -13,6 +13,12 @@
     transform: translateY(30%);
     animation: fade 3s ease infinite;
 }
+.history-container{
+    height:100%;
+    width:100%;
+    display: flex;
+    justify-content: start;
+}
 
 @keyframes fade{
     0%{
