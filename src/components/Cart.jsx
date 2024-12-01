@@ -6,7 +6,6 @@ import  html2pdf  from 'html2pdf.js';
 
 import TableComp from './TableComp';
 import { timeFormater } from '../utils/utils';
-import useAddHistory from '../hooks/useAddHistory';
 
 import './css/home.css';
 import './css/print.css';
