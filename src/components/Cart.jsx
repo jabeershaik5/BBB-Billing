@@ -18,7 +18,7 @@ const Cart = () => {
   const billType = useSelector(state=> state.dataReducer.billType); //kot bill or plain. true for plain.
   const dispatch = useDispatch();
   const printThis = useRef(); //refs to the bill to be printed
-  const { updateHistory } = useAddHistory();
+
   
   useEffect(()=>{
     //calculates total everytime the cart state changes
